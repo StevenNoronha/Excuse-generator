@@ -1,22 +1,26 @@
 import './App.css';
-import { useState } from 'react';
+import Axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [genText, setGenText] = useState("");
+
+  const fetchExcuse = (excuse) => {
+   Axios.get(`https://excuser-three.vercel.app/v1/excuse/${excuse}`).then(
+    (res) => {
+      setGenText(res.data[0].excuse);
+    }
+   );
+  };
+
   return (
     <div className="App">
-      <button onClick={() => {
-        setCount(count + 1);
-      }}>Increase</button>
-      <button onClick={() => {
-        setCount(count - 1);
-      }}>Decrease</button>
-      <button onClick={() => {
-        setCount(0);
-      }}>Set To Zero</button>
+      <h1>Generate Text</h1>
+      <button onClick={() => fetchExcuse("family")}>Family</button>
+      <button onClick={() => fetchExcuse("party")}>Party</button>
+      <button onClick={() => fetchExcuse("office")}>Office</button>
 
-      {count}
-      {/* omg */}
+      <h1>{genText}</h1>
     </div>
   );
 }

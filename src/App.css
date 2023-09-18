@@ -1,38 +1,36 @@
+html {
+  background-color: black;
+  color: white;
+  font-family: Calibri;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+p {
+  background-color: aquamarine;
+  font-size: 2rem;
+  color: black;
+  width: 70%;
+  padding: 2rem;
+  border-radius: 25px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  border: .2rem solid white;
+  background-color: chartreuse;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 45px;
+  width: 10rem;
+  font-size: 1.5rem;
+  font-family: Calibri;
 }

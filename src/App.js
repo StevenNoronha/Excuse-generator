@@ -1,6 +1,6 @@
 import './App.css';
 import Axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 
 function App() {
   const [genText, setGenText] = useState("");
@@ -15,12 +15,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Generate Text</h1>
+      <h1>Generate Excuse!</h1>
+      <div>
       <button onClick={() => fetchExcuse("family")}>Family</button>
       <button onClick={() => fetchExcuse("party")}>Party</button>
       <button onClick={() => fetchExcuse("office")}>Office</button>
-
-      <h1>{genText}</h1>
+      </div>
+      <p>{genText}</p>
     </div>
   );
 }
